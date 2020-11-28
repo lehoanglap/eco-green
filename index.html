@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECO GREEN LOGIN</title>
+    <meta name="description" content="hoang lap eco green">
+    <meta name="keywords"
+        content="Đăng nhập Eco Green, hoang lap Eco Green,Kiểm tra thạng thái chăm sóc khu vườn của bạn,https://lehoanglap.github.io/Eco-Green/">
+    <meta name="author" content="Hoang Lap ĐHGTVT_UTC">
+    <meta name="google-site-verification" content="VPU2mh7lJFvHtDoS3q3w5x_oUAG7uJi98gN7ru3_6LI" />
+    <LINK REL="SHORTCUT ICON" HREF="IMG/icon.ico">
+    <!-- Framework jquery.js -->
+    <script src="FRAMEWORK/Jquery/jquery.js"></script>
+    <!-- Framework boostrap -->
+    <link rel="stylesheet" href="FRAMEWORK/Boostrap-4.5.3/Css/bootstrap.css">
+    <link rel="stylesheet" href="FRAMEWORK/Boostrap-4.5.3/Css/bootstrap-grid.css">
+    <link rel="stylesheet" href="FRAMEWORK/Boostrap-4.5.3/Css/bootstrap-reboot.css">
+    <script src="FRAMEWORK/Boostrap-4.5.3/Js/bootstrap.js"></script>
+    <script src="FRAMEWORK/Boostrap-4.5.3/Js/bootstrap.bundle.js"></script>
+    <!-- Framework anime -->
+    <script src="FRAMEWORK/Anime/anime.js"></script>
+    <!-- Framework pickr -->
+    <link rel="stylesheet" href="FRAMEWORK/Pickr/classic.css">
+    <script src="FRAMEWORK/Pickr/pickr.js"></script>
+    <!-- Framework firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&family=Zhi+Mang+Xing&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="INDEX/Indexcss/index.css">
+    <!-- js -->
+    <script src="INDEX/indexjs/index.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDL3ZCRLZH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GDL3ZCRLZH');
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand">
+                    <a href="#" class="nav-link logo " style="font-family: 'Zhi Mang Xing', cursive;
+                    font-size: 1.3em;">ECO GREEN</a>
+
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="img">
+
+        </div>
+        <div class="back">
+
+        </div>
+        <div class="form_login">
+
+            <form onsubmit="return false" class="needs-validation form1 was-validated" novalidate>
+                <div class="form-row">
+                    <div class="col-12">
+                        <label for="validationTooltip01">Email</label>
+                        <input style="background-color:#2e4a58bf;color: white;" step="any" class="form-control"
+                            id="email" placeholder="Nhập địa chỉ email" required="">
+
+                    </div>
+
+
+                </div>
+                <p></p>
+                <div class="form-row">
+                    <div class="col-12">
+                        <label for="validationTooltip01">Mật khẩu</label>
+                        <input style="background-color:#2e4a58bf;color: white;" type="password" step="any"
+                            class="form-control" id="pass" placeholder="Nhập mật khẩu" required="">
+
+                    </div>
+
+
+                </div>
+                <br>
+                <button style="width: 100%;
+            font-size: 20px;
+            font-weight: 400;" class="btn btn-danger" id="sldl1">Đăng nhập</button>
+
+            </form>
+
+
+
+
+
+        </div>
+        <div class="alert">
+            <div class="alert alert-danger hide" role="alert">
+                Email hay mật khẩu không đồng nhất
+            </div>
+            <div class="alert alert-success hide" role="alert">
+                Đăng nhập thành công
+            </div>
+            <div class="alert alert-warning hide" role="alert">
+                Bạn nhập thiếu email hay mật khẩu rồi
+            </div>
+        </div>
+    </article>
+
+</body>
+<script>
+    $(document).ready(function () {
+        var h = window.innerHeight;
+        $(".img").css("height", h);
+        $(".back").css("height", h);
+
+    });
+</script>
+
+</html>

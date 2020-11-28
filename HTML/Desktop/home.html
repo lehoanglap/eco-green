@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECO GREEN DESKTOP</title>
+    <meta name="description" content="hoang lap eco green">
+    <meta name="keywords" content="Kiểm tra thạng thái chăm sóc khu vườn của bạn,lehoanglap.github.io/eco-green">
+    <meta name="author" content="Hoang Lap ĐHGTVT_UTC">
+    <LINK REL="SHORTCUT ICON" HREF="../../IMG/icon.ico">
+    <!-- Framework jquery.js -->
+    <script src="../../FRAMEWORK/Jquery/jquery.js"></script>
+    <!-- Framework boostrap -->
+    <link rel="stylesheet" href="../../FRAMEWORK/Boostrap-4.5.3/Css/bootstrap.css">
+    <link rel="stylesheet" href="../../FRAMEWORK/Boostrap-4.5.3/Css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../FRAMEWORK/Boostrap-4.5.3/Css/bootstrap-reboot.css">
+    <script src="../../FRAMEWORK/Boostrap-4.5.3/Js/bootstrap.js"></script>
+    <script src="../../FRAMEWORK/Boostrap-4.5.3/Js/bootstrap.bundle.js"></script>
+    <!-- Framework anime -->
+    <script src="../../FRAMEWORK/Anime/anime.js"></script>
+    <!-- Framework pickr -->
+    <link rel="stylesheet" href="../../FRAMEWORK/Pickr/classic.css">
+    <script src="../../FRAMEWORK/Pickr/pickr.js"></script>
+    <!-- Framework firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&family=Zhi+Mang+Xing&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../../CSS/DesktopCss/Home.css">
+    <!-- js -->
+    <script src="../../JS/Desktop/anime.js"></script>
+    <script src="../../JS/Desktop/Controler.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDL3ZCRLZH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GDL3ZCRLZH');
+</script>
+
+
+
+
+
+</head>
+
+<body id="hide" class="hide_hide">
+    <!-- menu -->
+    <header>
+        <!-- box1 -->
+        <div id="menu">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand">
+                    <a href="#" class="nav-link logo " style="font-family: 'Zhi Mang Xing', cursive;
+                    font-size: 1.3em;">ECO GREEN</a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item" style="padding-left: 1.5em;">
+                                <button id="logout" type="button" class="btn btn-danger">Logout</button>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <!-- box2 -->
+        <div class="slinemenu">
+            <div class="box">
+
+
+            </div>
+        </div>
+        <!-- box3 -->
+        <div class="conten1">
+            <div class="row">
+                <div class="col-6">
+                    <h1 id="come" style="letter-spacing: 0.5em; color: white;font-size: 41.6px;">Good</h1>
+                    <p id="trang_thai">Trạng thái kết nối <span id="check" class="btn btn-warning"
+                            type="button">Check</span></p>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Nhiệt độ</h2>
+                            <br>
+                            <h3 id="nhiet_do">Load</h3>
+
+                        </div>
+                        <div class="col-6">
+                            <h2>Độ ẩm</h2>
+                            <br>
+                            <h3 id="do_am">Load</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- box4 anime avg-->
+        <div class="svg" id="svg1">
+            <img src="../../IMG/svg1.svg" alt="#" style="width: 100%; height: auto;">
+
+
+        </div>
+        <div class="svg" id="svg2">
+            <img src="../../IMG/svg2.svg" alt="#" style="width: 100%; height: auto;">
+
+
+        </div>
+        <div class="svg" id="svg3">
+            <img src="../../IMG/svg3.svg" alt="#" style="width: 100%; height: auto;">
+
+
+        </div>
+
+
+
+
+    </header>
+    <br>
+    <br>
+
+    <article>
+        <div class="bos">
+            <div class="container-fluid">
+                <h1 style="color: white;font-size: 40px;">Dữ liệu theo dõi</h1>
+                <p style="color: #ffffff7d;font-style: italic;"> (*) Dữ liệu cập nhật 5 phút một lần</p>
+                <br>
+                <div class="row tex">
+                    <div class="col-4">
+                        <div class="tex1">
+                            <h2>Độ ẩm đất</h2>
+                            <h3 id="do_am_dat">Load</h3>
+                            <p>Độ ẩm thiết lập min: <samp id="do_am_dat_min">Load</samp></p>
+                            <p>Độ ẩm thiết lập max: <samp id="do_am_dat_max">Load</samp></p>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-4">
+                        <div class="tex1">
+                            <h2>Cường độ ánh sáng</h2>
+                            <h3 id="cuong_do_anh_sang">Load</h3>
+                            <p>Giới hạn bật led bé hơn <samp id="cuong_do_as_min">Load</samp></p>
+                            <p>Mã màu áp dụng: <samp id="ma_mau_ap_dung">Load</samp></p>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-4">
+                        <div class="tex1">
+                            <h2>Mực nước </h2>
+                            <h3 id="muc_nuoc">Load</h3>
+                            <p>Mực nước thấp nhất: <samp id="muc_nuoc_min">Load</samp></p>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <div class="bos">
+            <div class="container-fluid">
+                <h1 style="color: white;font-size: 40px;">Thiết lập hệ thống</h1>
+
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="tex1">
+                            <h2>Độ ẩm đất</h2>
+                            <form onsubmit="return false" class="needs-validation form1 was-validated" novalidate>
+                                <!-- --- -->
+                                <label for="validationTooltip01">Độ ẩm thiết lập</label>
+                                <div class="form-row">
+
+                                    <div class="col-6">
+
+                                        <input type="number" step="any" class="form-control" id="data1"
+                                            placeholder="VD: (20%) min" required="">
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <input type="number" step="any" class="form-control" id="data2"
+                                            placeholder="VD: (80%) max" required="">
+
+                                    </div>
+
+
+                                </div>
+
+                                <!-- <div class="form-row">
+                                    <div class="col-6">
+                                        <label for="validationTooltip01">Độ ẩm thiết lập max</label>
+                                        <input type="number" step="any" class="form-control" id="data2" placeholder="VD: 80%" required="">
+                
+                                    </div>
+                                    
+                
+                                </div> -->
+                                <!-- --- -->
+
+
+                            </form>
+                            <br>
+                            <p></p>
+                            <p style="text-align: left;">(*) Khoảng giá trị duy trì độ ẩm của đất</p>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-4">
+                        <div class="tex1 tex">
+                            <h2 style="text-align: center;">Ánh sáng</h2>
+                            <label for="validationTooltip01">Thiết lập ánh sáng</label>
+                            <form onsubmit="return false" class="needs-validation form1 was-validated" novalidate>
+
+                                <var class="form-row">
+                                    <div class="col-6">
+
+
+                                        <input type="number" step="any" class="form-control" id="data3"
+                                            placeholder=" Min bật led" required="">
+
+
+
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="colpi ">
+                                            <div class="color-picker"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                </var>
+
+
+                            </form>
+
+                            <br>
+                            <p></p>
+
+                            <p id="color_set">Mã màu chọn sẻ xuất hiện tại đây!</p>
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-4">
+                        <div class="tex1">
+                            <h2>Mực nước </h2>
+                            <form onsubmit="return false" class="needs-validation form1 was-validated" novalidate>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <label for="validationTooltip01">Mực nước min</label>
+                                        <input type="number" step="any" class="form-control" id="data4"
+                                            placeholder="VD: 10%" required="">
+
+                                    </div>
+
+
+                                </div>
+                                <br>
+                                <p></p>
+                                <p>(*) Mức nước nhỏ nhất trong bình chứa giữ cặn bã</p>
+
+                            </form>
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div class="alert alert1  alert-success alert-dismissible fade show"
+                    style="position: fixed;top: 20px;right: 20px;z-index: 999999;" role="alert">
+                    <strong>Thành công</strong> Dữ liệu đã được cập nhật lên hệ thống.
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="check">
+            <div class="container-fluid checkbox">
+                <h1 style="color: white;font-size: 40px;">Check Error</h1>
+                <p style="color: #ffffff7d;font-style: italic;"> (*) Kiểm tra hệ thống</p>
+                <div class="row">
+                    <div class="col-2">
+                        <ul>
+                            <li id="check_trang_thai_rgb">
+                                <p>Led RGB <samp>Load</samp></p>
+                            </li>
+                            <li id="check_trang_thai_may_bom">
+                                <p>Máy bơm <samp>Load</samp></p>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                    <div class="col-5">
+                        <ul>
+                            <li id="check_nhiet_do_do_am">
+                                <p>Cảm biến nhiệt độ độ ẩm môi trường <samp>Load</samp></p>
+                            </li>
+
+                            <li id="check_do_am_dat">
+                                <p>Cảm biến độ ẩm đất <samp>Load</samp></p>
+                            </li>
+
+                            <li id="check_rgb_led">
+                                <p>LED RGB <samp>Load</samp></p>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-5">
+                        <ul>
+                            <li id="check_cam_bien_cuong_do_as">
+                                <p>Cảm biến cường độ ánh sáng <samp>Load</samp></p>
+                            </li>
+
+                            <li id="check_cam_bien_khoang_cach">
+                                <p>Cảm biến khoảng cách <samp>Load</samp></p>
+                            </li>
+
+                            <li id="check_may_bom">
+                                <p>Máy bơm <samp>Load</samp></p>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="svgbos">
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos possimus quisquam officiis minima quos aliquid obcaecati velit tenetur laudantium id neque iusto aspernatur soluta, dignissimos laborum! Saepe eos molestiae repellat.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos possimus quisquam officiis minima quos aliquid obcaecati velit tenetur laudantium id neque iusto aspernatur soluta, dignissimos laborum! Saepe eos molestiae repellat.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos possimus quisquam officiis minima quos aliquid obcaecati velit tenetur laudantium id neque iusto aspernatur soluta, dignissimos laborum! Saepe eos molestiae repellat.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos possimus quisquam officiis minima quos aliquid obcaecati velit tenetur laudantium id neque iusto aspernatur soluta, dignissimos laborum! Saepe eos molestiae repellat.</p> -->
+
+        </div>
+
+    </article>
+    <div class="sldl1 form">
+        <button type="button" style="width: 100%;
+        font-size: 20px;
+        font-weight: 400;display: none;" class="btn btn-primary" id="sldl1">Sử lý, cập nhật dữ liệu</button>
+    </div>
+    <footer>
+        <div class="row">
+            <p>Copyright © 2020, Designed by HoangLap</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<script>
+    $(document).ready(function () {
+
+
+        $(document).keypress(function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                $("#sldl1").click();
+                return false;
+            }
+        });
+
+
+    });
+</script>
+
+
+
+
+
+</html>

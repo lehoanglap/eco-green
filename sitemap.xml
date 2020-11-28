@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<urlset xmlns="http://www.google.com/schemas/sitemap/0.84" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+		<url>
+			<loc>https://lehoanglap.github.io/eco-green/</loc>
+			<changefreq>always</changefreq>
+		</url>
+
+		<url>
+			<loc>https://lehoanglap.github.io/eco-green/html/desktop/home.html</loc>
+			<changefreq>always</changefreq>
+		</url>
+
+		<url>
+			<loc>https://lehoanglap.github.io/eco-green/html/mobi/home.html</loc>
+			<changefreq>always</changefreq>
+		</url>
+
+	</urlset>
+
