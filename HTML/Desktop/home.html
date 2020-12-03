@@ -199,13 +199,13 @@
 
                                     <div class="col-6">
 
-                                        <input type="number" step="any" class="form-control" id="data1"
+                                        <input max="100" type="number" step="any" class="form-control" id="data1"
                                             placeholder="VD: (20%) min" required="">
 
                                     </div>
                                     <div class="col-6">
 
-                                        <input type="number" step="any" class="form-control" id="data2"
+                                        <input max="100" type="number" step="any" class="form-control" id="data2"
                                             placeholder="VD: (80%) max" required="">
 
                                     </div>
@@ -246,7 +246,7 @@
                                     <div class="col-6">
 
 
-                                        <input type="number" step="any" class="form-control" id="data3"
+                                        <input max="65535" type="number" step="any" class="form-control" id="data3"
                                             placeholder=" Min bật led" required="">
 
 
@@ -283,7 +283,7 @@
                                 <div class="form-row">
                                     <div class="col-12">
                                         <label for="validationTooltip01">Mực nước min</label>
-                                        <input type="number" step="any" class="form-control" id="data4"
+                                        <input max="80" type="number" step="any" class="form-control" id="data4"
                                             placeholder="VD: 10%" required="">
 
                                     </div>
@@ -304,12 +304,17 @@
 
                     </div>
                 </div>
-                <div class="alert alert1  alert-success alert-dismissible fade show"
+                <div class="alert"
                     style="position: fixed;top: 20px;right: 20px;z-index: 999999;" role="alert">
-                    <strong>Thành công</strong> Dữ liệu đã được cập nhật lên hệ thống.
-                    <button type="button" class="close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    
+                        <div class="alert alert-danger hide" role="alert">
+                            Cập nhật dữ liệu không thành công!!
+                        </div>
+                        <div class="alert alert-success hide" role="alert">
+                            Cập nhật dữ liệu thành công!!
+                        </div>
+                        
+                    
                 </div>
 
             </div>

@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
+  
   var hours = new Date();
   var get_hours= hours.getHours();
    var morning= get_hours >= 0 && get_hours<= 12;
    var afternoon=get_hours > 12 && get_hours <= 18;
-   var evening=get_hours > 18 && get_hours <= 23
+   var evening=get_hours > 18 && get_hours <=23
 
    
   
@@ -12,6 +13,7 @@ $(document).ready(function () {
   
   if (morning == true) {
     $("#come").text("Good morning!!");
+
 
     
   }
@@ -33,6 +35,12 @@ $(document).ready(function () {
 
   }
 
+  
+
+  
+
+
+
   var firebaseConfig = {
     apiKey: "AIzaSyDoKf2XHogYOzFCkZGRDyi0Ath8Uuk0CDk",
     authDomain: "quickstart-1560498993739.firebaseapp.com",
@@ -44,21 +52,23 @@ $(document).ready(function () {
   };
 
   firebase.initializeApp(firebaseConfig);
-  
 
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       $("#hide").removeClass('hide_hide');
       
       
+      
     } else {
-      window.location.href='../../index.html'
+      window.location.href='../../index.html';
     }
   });
+  
 
-  var database = firebase.database();
+  
   //   read data firebase
   //////////////////////////////////////
+  var database = firebase.database();
   var data_read_base = database.ref('data_realtime');
   data_read_base.on('value', function (snapshot) {
     //su ly du lieu nhan ve
@@ -136,11 +146,11 @@ $(document).ready(function () {
 
     switch (trang_thai_led_rgb) {
       case 0:
-        $("#check_trang_thai_rgb").html('<p>Trạng thái Led RGB <samp style="width: 50px;" class="btn btn-danger ">OFF</samp></p>');
+        $("#check_trang_thai_rgb").html('<p>Led RGB <samp style="width: 50px;" class="btn btn-danger ">OFF</samp></p>');
         
         break;
       case 1:
-        $("#check_trang_thai_rgb").html('<p>Trang thái Led RGB <samp style="width: 50px;" class="btn btn-success "> ON </samp></p>');
+        $("#check_trang_thai_rgb").html('<p>Led RGB <samp style="width: 50px;" class="btn btn-success "> ON </samp></p>');
         
         break;
     
@@ -150,11 +160,11 @@ $(document).ready(function () {
     //trạng thái của máy bơm
     switch (trang_thai_may_bom) {
       case 0:
-        $("#check_trang_thai_may_bom").html('<p>Trạng thái máy bơm <samp style="width: 50px;" class="btn btn-danger ">OFF</samp></p>');
+        $("#check_trang_thai_may_bom").html('<p>Máy bơm <samp style="width: 50px;" class="btn btn-danger ">OFF</samp></p>');
         
         break;
       case 1:
-        $("#check_trang_thai_may_bom").html('<p>Trạng thái máy bơm <samp style="width: 50px;" class="btn btn-success "> ON</samp></p>');
+        $("#check_trang_thai_may_bom").html('<p>Máy bơm <samp style="width: 50px;" class="btn btn-success "> ON</samp></p>');
         
         break;
     
@@ -165,11 +175,11 @@ $(document).ready(function () {
     //check error cảm biến nhiệt độ độ ẩm môi trường
     switch (cam_bien_nhiet_do_do_am) {
       case 0:
-        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ, độ ẩm <samp style="width: 50px;" class="btn btn-danger ">Err</samp></p>');
+        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ độ ẩm môi trường <samp style="width: 50px;" class="btn btn-danger ">Err</samp></p>');
         
         break;
       case 1:
-        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ, độ ẩm <samp style="width: 50px;" class="btn btn-success "> OK</samp></p>');
+        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ độ ẩm môi trường <samp style="width: 50px;" class="btn btn-success "> OK</samp></p>');
         
         break;
     
@@ -362,8 +372,18 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
+          
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
@@ -375,12 +395,20 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
-    var i=0
 
     if (data_input_update[2] != 0) {
       firebase.database().ref('data_realtime/setting/anh_sang').update({
@@ -389,11 +417,19 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
-      }
-      )
+      })
     }
 
     if (data_input_update[3] != "") {
@@ -408,8 +444,17 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
@@ -417,28 +462,37 @@ $(document).ready(function () {
     if (data_input_update[8] != 0) {
       firebase.database().ref('data_realtime/setting/').update({
         muc_nuoc: data_input_update[8]
-        
-        
 
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
-          
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
-      }
-      
-      )
+      })
     }
 
 
     //update data firebase
 
+    //kiểm tra trạng thái đăng nhập
+    
+
 
 
     // code su ly gui data
   });
+
+
 
 
 
@@ -452,7 +506,5 @@ $(document).ready(function () {
     });
     
   });
-
-  // --------------END CODE--------------
-
+// --------------END CODE--------------
 });

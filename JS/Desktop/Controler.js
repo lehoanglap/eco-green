@@ -372,8 +372,18 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
+          
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
@@ -385,8 +395,17 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
@@ -398,8 +417,17 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
@@ -416,8 +444,17 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
@@ -429,8 +466,17 @@ $(document).ready(function () {
       },function(error) {
         if (error) {
           // The write failed...
+          $(".alert-danger").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-danger").addClass('hide');
+            }, 3000)
         } else {
-          $(".alert").removeClass("alert1");
+          $(".alert-success").removeClass("hide");
+
+            setTimeout(function() {
+                $(".alert-success").addClass('hide');
+            }, 3000)
         }
       })
     }
