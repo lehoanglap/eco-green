@@ -175,11 +175,11 @@ $(document).ready(function () {
     //check error cảm biến nhiệt độ độ ẩm môi trường
     switch (cam_bien_nhiet_do_do_am) {
       case 0:
-        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ độ ẩm môi trường <samp style="width: 50px;" class="btn btn-danger ">Err</samp></p>');
+        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ độ ẩm <samp style="width: 50px;" class="btn btn-danger ">Err</samp></p>');
         
         break;
       case 1:
-        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ độ ẩm môi trường <samp style="width: 50px;" class="btn btn-success "> OK</samp></p>');
+        $("#check_nhiet_do_do_am").html('<p>Cảm biến nhiệt độ độ ẩm <samp style="width: 50px;" class="btn btn-success "> OK</samp></p>');
         
         break;
     
